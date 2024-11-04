@@ -12,6 +12,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'client';
   http = inject(HttpClient);
+
   ngOnInit(): void {
     this.http.get('http://127.0.0.1:5000/api/Users').subscribe({
       next: (response) => {
